@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<cc:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cc="clr-namespace:iApprove.CustomControl;assembly=iApprove"
+             x:Class="iApprove.View.LoginPage"
+             xmlns:res="clr-namespace:iApprove.LangResource;assembly=iApprove"
+             Title="{res:Translate titleLoginPage}" Style="{StaticResource ContentPageStyle}"
+			 CurrentPageName="RT_HOME">
+
+     <!-- NEW VIEW-->
+
+      <Grid  >
+        <Image Source="LoginBG.png" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Aspect="AspectFill" ></Image>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Image Source="Stripes.png"   HorizontalOptions="CenterAndExpand" Margin="0,44,0,0" Aspect="Fill"></Image>
+        <Image Source="Adient.png" HorizontalOptions="CenterAndExpand" Margin="0,40,0,0" ></Image>
+        <Image Source="iApprove.png" HorizontalOptions="CenterAndExpand"  Margin="0,30,0,0" ></Image>
+           <Frame  CornerRadius="4" OutlineColor="Silver" HorizontalOptions ="CenterAndExpand" VerticalOptions="CenterAndExpand"  BackgroundColor="White" HeightRequest="300" WidthRequest="280" Margin="0,25,0,30">
+           <Grid >
+             <Grid.RowDefinitions>
+                <RowDefinition />
+<!--                        <RowDefinition>-->
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                 <RowDefinition />
+            </Grid.RowDefinitions>
+             <Grid  Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0"  Grid.Column="0" Source="Username.png" x:Name="UserIcon" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="20" Margin="0,0,0,-25"/>
+            <cc:CustomEntry Grid.Row="0" Grid.Column="1" x:Name="Textbox" Focused="Handle_Focused" Unfocused="Handle_Unfocused" Text="{Binding UserName,Mode=TwoWay}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Placeholder="{res:Translate userNameText}" FontSize="14" PlaceholderColor="#BCBCBE" Margin="0,0,0,-25"></cc:CustomEntry>    
+       <BoxView Grid.Row="1" Grid.ColumnSpan="2"  x:Name="BoxViewUserName" BackgroundColor="#E3E3E3" HeightRequest="1" VerticalOptions="End" HorizontalOptions="CenterAndExpand"  WidthRequest="280" ></BoxView>
+        </Grid>
+         <Grid Grid.Row="1">
+           <Grid.RowDefinitions>
+           <RowDefinition/> 
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Source="Password.png" x:Name="UserPassword" WidthRequest="20" HeightRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,0,0,-25"/>
+            <cc:CustomEntry Grid.Row="0" Grid.Column="1" Text="{Binding Password,Mode=TwoWay}" x:Name="Password" Focused="Handle_Foocused" Unfocused="Handle_Unfoocused" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="{res:Translate passwordText}" PlaceholderColor="#BCBCBE" FontSize="14" Margin="0,0,0,-25"></cc:CustomEntry>
+                <BoxView Grid.Row="1" Grid.ColumnSpan="2" x:Name="BoxViewPassword" BackgroundColor="#E3E3E3" HeightRequest="1" VerticalOptions="End" HorizontalOptions="CenterAndExpand" WidthRequest="280" ></BoxView>
+        </Grid>
+            <StackLayout Grid.Row="2" Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"  HeightRequest="12" Margin="0,0,0,-15">
+                        <Image  Source="{Binding SortImageSource}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-15,0,0"/>
+                        
+<!--            <Switch IsToggled="{Binding RememberMe,Mode=TwoWay}" HeightRequest="12"></Switch>-->
+            <Label Text="{res:Translate rememberMe}" FontSize="12" TextColor="#616265" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-15,0,0"></Label>
+                        <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByIDTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                
+        </StackLayout>
+       <Button Text="{res:Translate login}"    TextColor="{Binding LoginButtonTextColor}"  Grid.Row="3" x:Name="CheckLogin" Command="{Binding LoginCommand}" 
+                    BackgroundColor="{Binding LoginButtonBackgroundColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="284" HeightRequest="42" ></Button>
+
+                    <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="{res:Translate forgotPassword}" FontSize="12" TextColor ="Gray"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,20,0,0"></Label>
+                        <Image Source="ForgotPassword.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,20,0,0"/>
+                    </StackLayout>
+                </Grid>
+               </Frame>
+         </StackLayout>
+             </Grid>
+    <!-- UTO THIS-->
+
+
+
+
+    <!-- OLD VIEW-->
+    <!--<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Margin="40,0,40,0">
+
+        <Image Source="Stripes.png" HorizontalOptions="FillAndExpand" Margin="-40,20,-40,20" ></Image>
+        <Image Source="iApproveLogo.png" HorizontalOptions="Center" WidthRequest="200" Margin="0,20,0,20" ></Image>
+        
+        <Label Text="{res:Translate iApproveHeaderText}" FontSize="60" HorizontalTextAlignment="Center" TextColor="#C3D654"></Label>
+        <Label Text="{res:Translate iApproveSubText}" HorizontalTextAlignment="Center" FontSize="18" TextColor="#1B4559" Margin="0,0,0,30"></Label>
+        
+             <Grid Margin="0,0,0,20">
+           <Grid.RowDefinitions>
+           <RowDefinition/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Source="user_icon.png" WidthRequest="20" HeightRequest="20"/>
+            <cc:CustomEntry Grid.Row="0" Grid.Column="1" Text="{Binding UserName,Mode=TwoWay}"  Placeholder="{res:Translate userNameText}" PlaceholderColor="#BCBCBE"></cc:CustomEntry>    
+       <BoxView Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="Gray" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand" ></BoxView>
+        </Grid>
+        
+        <Grid Margin="0,0,0,20">
+           <Grid.RowDefinitions>
+           <RowDefinition/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.Column="0" Source="password_icon.png" WidthRequest="20" HeightRequest="20"/>
+            <cc:CustomEntry Grid.Row="0" Grid.Column="1" Text="{Binding Password,Mode=TwoWay}" Placeholder="{res:Translate passwordText}" PlaceholderColor="#BCBCBE"></cc:CustomEntry>
+                <BoxView Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="Gray" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand" ></BoxView>
+        </Grid>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="0,0,0,20">
+            <Switch IsToggled="{Binding RememberMe,Mode=TwoWay}"></Switch>
+            <Label Text="{res:Translate rememberMe}" TextColor="Black"></Label>
+        </StackLayout>
+
+        <Button Text="{res:Translate login}" TextColor="#C3D654" BackgroundColor="#1B4559" Command="{Binding LoginCommand}" Margin="0,0,0,10"></Button>
+
+        <Label Text="{res:Translate forgotPassword}" HorizontalTextAlignment="Center" TextColor ="Gray"></Label>
+        
+    </StackLayout>-->
+</cc:BaseContentPage>

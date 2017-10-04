@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="iApprove.App">
+	<Application.Resources>
+		<ResourceDictionary>
+          
+			<!-- Color Themes -->
+            <Color x:Key="Primary">#00465B</Color>
+            <Color x:Key="BannerColor">#E6E6E6</Color>
+            <Color x:Key="SubTextForeColor">#616265</Color>
+            <Color x:Key="SeparatorColor">#BCBCBE</Color>
+            <Color x:Key="LoginInActiveTextColor">#B9B9BB</Color>
+            <Color x:Key="LoginActiveTextColor">#BCD432</Color>
+            <!-- End -->
+            
+            <Style x:Key="ContentPageStyle" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="#fff" />
+                <Setter Property="NavigationPage.BackButtonTitle" Value="" />
+            </Style>
+
+            <Style x:Key="NaviBarIconStyle" TargetType="Image">
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="WidthRequest" Value="20" />
+                <Setter Property="Margin" Value="7,0,7,0"/>
+            </Style>
+            <Style x:Key="NaviBarTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#fff" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Margin" Value="5,0,5,0" />
+            </Style>  
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

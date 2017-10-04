@@ -1,0 +1,31 @@
+Function=xamarin_get_block_descriptor
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/Xamarin.iOS.dll
+Function=CreateZStream
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/System.dll
+Function=CloseZStream
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/System.dll
+Function=Flush
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/System.dll
+Function=ReadZStream
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/System.dll
+Function=WriteZStream
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/System.dll
+Function=xamarin_start_wwan
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/System.dll
+Function=xamarin_timezone_get_data
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/mscorlib.dll
+Function=xamarin_log
+	/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/mtouch-cache/Link/mscorlib.dll
+Function=mono_pmip
+Function=xamarin_dyn_objc_msgSend
+Function=xamarin_dyn_objc_msgSendSuper
+Function=xamarin_dyn_objc_msgSend_stret
+Function=xamarin_dyn_objc_msgSendSuper_stret

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="iApprove.View.BasicInfo.BasicInfoContentView">
+	<ContentView.Content>
+        <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="Start" Orientation="Vertical" Margin="0,10,0,0">
+                <Label Text="Has Emergency Service Contacted?" HorizontalOptions="StartAndExpand" Style="{StaticResource BaseLabel}"></Label>
+            </StackLayout>
+	</ContentView.Content>
+</ContentView>

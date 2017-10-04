@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="hello">Hello World, Click Me!</string>
+  <string name="app_name">SegmentedControl.Android.Android</string>
+  <string name="auth_welcome_text">
+    Welcome to the Cummins PowerCommand Cloud Mobile App!To authenticate and use this app, you will need to enter the user ID and
+    password provided by your Cummins Distributor or Dealer. If you have any questions, contact your local Cummins Distributor or Dealer. Enjoy!"
+  </string>
+
+  <string name="notification_mark_popup_firsttext">"New notifications can be moved into the Acknowledged section by swiping left on the right edge of a notification and tapping the grey ‘Acknowledge’ button."</string>
+  <string name ="notification_mark_popup_lasttext">This action does not affect your assets, it only moves the notifications. Acknowledging notifications on your phone will also not affect the notifications of other users on the account."</string>
+
+  <string name="coachmark_label1">"Notifications are informational messages only. Marking them as Acknowledged does not reset an asset or take any other action."</string>
+  <string name="coachmark_label2">"To send a remote command to an asset, you will need to tap the buttons locked to the bottom of each asset screen. These will trigger alerts with directions."</string>
+  <string name="coachmark_label3">"Remember to inform others if you are going to remote start or test an asset to ensure they are clear of the machinery."</string>
+</resources>
+

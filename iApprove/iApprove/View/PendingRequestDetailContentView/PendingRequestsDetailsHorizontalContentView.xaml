@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="iApprove.View.PendingRequestDetailContentView.PendingRequestsDetailsHorizontalContentView">
+	<ContentView.Content>
+        
+  <ListView x:Name="HorizontalListView" ItemsSource="{Binding TempList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell >    
+                         <ViewCell.View>    
+                                   
+                            <ScrollView HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                               <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                
+                                        <Label Text="{Binding title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+                                       
+                                    <Label Text="{Binding Value}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1"/>
+                                     </Grid>
+                                 </ScrollView>  
+                             <Grid Margin="12"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.3*"/>
+                                                <ColumnDefinition Width="1"/>
+                                                <ColumnDefinition Width="0.3*"/>
+                                                <ColumnDefinition Width="1"/>
+                                                <ColumnDefinition Width="0.3*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Request No" FontSize="10" VerticalOptions="CenterAndExpand"  HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding RequestNo}" FontSize="14" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                                    </StackLayout>
+                                           <Label Grid.Column="1" BackgroundColor="Gray" VerticalOptions="Fill"/>
+                                    <StackLayout Grid.Column="2" >
+                                        <Label Text="Date Received" FontSize="10" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding DateReceived}" FontSize="14" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                                    </StackLayout>
+                                           <Label Grid.Column="3" BackgroundColor="Gray" VerticalOptions="Fill"/>
+                                    <StackLayout Grid.Column="4">
+                                        <Label Text="Status" FontSize="10" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding Status}" FontSize="14" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                                    </StackLayout>
+                                    <Image Grid.Column="5"  Source="chevron.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                </Grid>
+                             </ViewCell.View>    
+                                </ViewCell>
+                        </DataTemplate>
+                   </ListView.ItemTemplate>
+                </ListView>
+             <!--<Image Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Source="{Binding Image}"/>-->
+<!--        <CarouselView ItemsSource="{Binding TempList}">
+    <CarouselView.ItemTemplate>
+      <DataTemplate>
+          <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                
+                                        <Label Text="{Binding title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+                                       
+                                    <Label Text="{Binding Value}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1"/>
+                                     </Grid>
+      </DataTemplate>
+    </CarouselView.ItemTemplate>
+  </CarouselView>-->
+	</ContentView.Content>
+</ContentView>

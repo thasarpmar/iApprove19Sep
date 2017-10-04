@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cc:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:iApprove" x:Class="iApprove.View.HomePage"
+    xmlns:cc="clr-namespace:iApprove.CustomControl;assembly=iApprove" xmlns:res="clr-namespace:iApprove.LangResource;assembly=iApprove" 
+    Title="{res:Translate titleHomePage}" Style="{StaticResource ContentPageStyle}" 
+    xmlns:conv="clr-namespace:iApprove.Converter;assembly=iApprove">
+   <cc:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <conv:SortImageConverter x:Key="sortImageConverter" />
+            <conv:TextToImageConverter x:Key="TextToImageConverterKey">
+            </conv:TextToImageConverter>
+            <conv:PendingRequestAppend x:Key="PendingRequestAppendKey">
+            </conv:PendingRequestAppend>
+        </ResourceDictionary>
+    </cc:BaseContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HeightRequest="42" BackgroundColor="{StaticResource BannerColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Margin="12,0,0,0" Grid.Column="0" Text="Total Pending Request 37" TextColor="{StaticResource Primary}" FontSize="12" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                <StackLayout Margin="0,0,12,0" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="{Binding ShowByText}" TextColor="{StaticResource SubTextForeColor}" FontSize="10" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image Source="downchevron.png" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OnShowOptionsPressed}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+            <StackLayout Grid.Row="1" HeightRequest="75" BackgroundColor="{StaticResource BannerColor}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="{Binding IsShowOptionsVisible}" Margin="0,-8,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand">
+                    <Image Source="{Binding ShowApplictationImage}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Text="{Binding ShowbyApplicationLbl}" TextColor="{Binding ShowTextByApp}" FontSize="12" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowByApplication}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" Margin="30,0,8,0">
+                    <Image Source="{Binding ShowRequestsImage}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Label Text="{Binding ShowbyRequestsLbl}" TextColor="{Binding ShowTextByReq}" FontSize="12" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ShowByRequest}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,-12,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="{StaticResource SubTextForeColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="30" IsVisible="{Binding IsRequestListVisible}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Request Id" LineBreakMode="WordWrap" TextColor="White" Grid.Column="0" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="12,0,0,0" />
+                    <Image Source="{Binding SortImageSource}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByIDVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByIDTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Request Date" TextColor="White" LineBreakMode="WordWrap" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image Source="{Binding SortImageSource}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByDateVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByDateTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Column="2" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Request Type" LineBreakMode="WordWrap" TextColor="White" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image Source="{Binding SortImageSource}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByTypeVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByTypeTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Column="3" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Requestor Name" LineBreakMode="WordWrap" TextColor="White" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image Source="{Binding SortImageSource}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByNameVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByNameTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+            <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="450">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <!-- <RowDefinition Height="Auto" />-->
+                    </Grid.RowDefinitions>
+                    <ListView Grid.Row="0" VerticalOptions="Fill" HorizontalOptions="FillAndExpand" ItemsSource="{Binding DepartmentList}" SelectedItem="{Binding SelectedDept,Mode=TwoWay}" SeparatorVisibility="None" HasUnevenRows="true" IsVisible="{Binding IsDepartmentListVisible}" Margin="0,-12,0,0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="1" />
+                                            </Grid.RowDefinitions>
+                                            <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Grid.Row="0" HeightRequest="75">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Image Grid.Column="0" Grid.RowSpan="2" Margin="50,18,24,0" Source="{Binding DepartmentModel.DeptLogo,Converter={StaticResource TextToImageConverterKey}}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding DepartmentModel.DeptName}" Margin="0,20,0,-25" FontSize="18" TextColor="{StaticResource Primary}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DepartmentModel.PendingRequestCount,Converter={StaticResource PendingRequestAppendKey}}" Margin="0,-5,0,-22" FontSize="12" TextColor="{StaticResource SubTextForeColor}" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                                            </Grid>
+                                            <BoxView Grid.Row="1" BackgroundColor="Gray" HeightRequest="0.5" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                                            </BoxView>
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding DepartmentTappedCommand}" CommandParameter="{Binding}" NumberOfTapsRequired="1" />
+                                            </Grid.GestureRecognizers>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <!-- This part is used for the listing of the request for home page-->
+                    <ListView Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" HasUnevenRows="true" SeparatorVisibility="None" ItemsSource="{Binding PendingRequestList}" IsVisible="{Binding IsRequestListVisible}" Margin="0,-12,0,0">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition Height="1" />
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Column="0" Text="{Binding RequestNo}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="12,0,0,0" TextColor="#616265"/>
+                                                <Label Grid.Column="1" Text="{Binding DateReceived}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#616265"/>
+                                                <Label Grid.Column="2" Text="{Binding RequestType}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#616265"/>
+                                                <StackLayout Grid.Column="3" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                                                    <Label Text="{Binding RequestorName}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#616265"/>
+                                                    <Image Source="RightArrowPR.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,12,0" />
+                                                </StackLayout>
+                                            </Grid>
+                                            <BoxView Grid.Row="1" BackgroundColor="{StaticResource SeparatorColor}" HeightRequest="0.5" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                                            </BoxView>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </ScrollView>
+            <Button Grid.Row="2" Text="{res:Translate filter}" TextColor="{StaticResource SubTextForeColor}" HeightRequest="50" BackgroundColor="{StaticResource BannerColor}" IsVisible="{Binding IsRequestListVisible}" FontSize="12" HorizontalOptions="FillAndExpand" VerticalOptions="End" Command="{Binding FilterCommand}" />
+        </Grid>
+    </Grid>
+    <!-- <local:GridView x:Name="grdView" Grid.Row="1" Grid.ColumnSpan="3" ItemHeight="200" ItemWidth="152" ItemsSource="{Binding DepartmentList}">
+    <local:GridView.ItemTemplate>
+    <DataTemplate>
+    <ViewCell>
+    <ViewCell.View>
+    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Silver">
+    <Grid.RowDefinitions>
+    <RowDefinition Height="0.7*"/>
+    <RowDefinition Height="0.15*"/>
+    <RowDefinition Height="0.15*"/>
+    </Grid.RowDefinitions>
+    <cc:CircleImageView Grid.Row="0" HeightRequest="66" HorizontalOptions="CenterAndExpand" Aspect="AspectFill"
+    WidthRequest="66" Source="{Binding DeptLogo}"></cc:CircleImageView>
+    <Label Grid.Row="1" Text="{Binding DeptName}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+    <Label Grid.Row="2" Text="{Binding PendingRequestCount}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+    </Grid>
+    </ViewCell.View>
+    </ViewCell>
+    </DataTemplate>
+    </local:GridView.ItemTemplate>
+    </local:GridView>-->
+</cc:BaseContentPage>

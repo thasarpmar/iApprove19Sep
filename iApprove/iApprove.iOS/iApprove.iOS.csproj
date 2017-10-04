@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F457271-C100-455F-9497-DFCD5AB69A2D}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ProjectTemplate.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>ProjectTemplate.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+<MtouchSdkVersion></MtouchSdkVersion>
+<CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements></CodesignEntitlements>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DependencyService\CommonUtility.cs" />
+    <Compile Include="DependencyService\MenuView.cs" />
+    <Compile Include="DependencyService\SecureStorage.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderer\CustomButtonRenderer.cs" />
+    <Compile Include="Renderer\CustomEntryRenderer.cs" />
+    <Compile Include="Renderer\CustomListViewControlRenderer.cs" />
+    <Compile Include="Renderer\CustomListViewItemRenderer.cs" />
+    <Compile Include="Renderer\CustomNavigationPageRenderer.cs" />
+    <Compile Include="Repository\iOSSQLite.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
+    <None Include="packages.config" />
+    <Compile Include="Renderer\CustomEditorRenderer.cs" />
+    <Compile Include="Renderer\CustomMapRenderer.cs" />
+    <Compile Include="Renderer\CustomMKAnnotationView.cs" />
+    <Compile Include="Renderer\CustomMenuListViewRenderer.cs" />
+    <Compile Include="Renderer\MenuViewCellRenderer.cs" />
+    <Compile Include="Renderer\CustomPickerRenderer.cs" />
+    <Compile Include="DependencyService\FileHandler.cs" />
+    <Compile Include="Renderer\ContentPageRenderer.cs" />
+    <Compile Include="Renderer\CircleImageViewRenderer.cs" />
+    <Compile Include="Renderer\CameraViewRenderer.cs" />
+    <Compile Include="Renderer\PDFWebViewRenderer.cs" />
+    <Compile Include="GridViewRenderer.cs" />
+    <Compile Include="GridCollectionView.cs" />
+    <Compile Include="GridDataSource.cs" />
+    <Compile Include="GridItemSelectedViewOverlay.cs" />
+    <Compile Include="GridViewCell.cs" />
+    <Compile Include="GridViewDelegate.cs" />
+    <Compile Include="SegmentedControlRenderer.cs" />
+    <Compile Include="TLScrollViewRenderer.cs" />
+    <Compile Include="RoundedBoxRenderer.cs" />
+    <Compile Include="Renderer\CircleLabelViewRenderer.cs" />
+    <Compile Include="SvgImageRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\xamarin.png" />
+    <BundleResource Include="Photos\default.png" />
+    <BundleResource Include="Resources\splashscreen.png" />
+    <BundleResource Include="Resources\iApproveLogo.png" />
+    <BundleResource Include="Resources\placeholder_image_logo.png" />
+    <BundleResource Include="Resources\chevron.png" />
+    <BundleResource Include="Resources\cross cropped.jpg" />
+    <BundleResource Include="Resources\downchevron.png" />
+    <BundleResource Include="Resources\Stripes.png" />
+    <BundleResource Include="Resources\RadioButton_NotSelected.png" />
+    <BundleResource Include="Resources\RadioButton_Selected.png" />
+    <BundleResource Include="Resources\placeholder-image.png" />
+    <BundleResource Include="Resources\checkedimage.png" />
+    <BundleResource Include="Resources\uncheckedimage.png" />
+    <BundleResource Include="Resources\up-chevron.png" />
+    <BundleResource Include="Resources\Search.png" />
+    <BundleResource Include="Resources\Adient.png" />
+    <BundleResource Include="Resources\CAR.png" />
+    <BundleResource Include="Resources\Dropdown.png" />
+    <BundleResource Include="Resources\Finance.png" />
+    <BundleResource Include="Resources\ForgotPassword.png" />
+    <BundleResource Include="Resources\HR.png" />
+    <BundleResource Include="Resources\iApprove.png" />
+    <BundleResource Include="Resources\Ipsum.png" />
+    <BundleResource Include="Resources\ITARAS.png" />
+    <BundleResource Include="Resources\LoginBG.png" />
+    <BundleResource Include="Resources\LoremIpsum.png" />
+    <BundleResource Include="Resources\Notifi.png" />
+    <BundleResource Include="Resources\Password.png" />
+    <BundleResource Include="Resources\PasswordSelected.png" />
+    <BundleResource Include="Resources\PDx.png" />
+    <BundleResource Include="Resources\RB.png" />
+    <BundleResource Include="Resources\RBSelected.png" />
+    <BundleResource Include="Resources\Username.png" />
+    <BundleResource Include="Resources\UsernameSelected.png" />
+    <BundleResource Include="Resources\About.png" />
+    <BundleResource Include="Resources\About_Onclick.png" />
+    <BundleResource Include="Resources\Settings_Onclick.png" />
+    <BundleResource Include="Resources\Help.png" />
+    <BundleResource Include="Resources\Help_Onclick.png" />
+    <BundleResource Include="Resources\Logoff.png" />
+    <BundleResource Include="Resources\Logoff_Onclick.png" />
+    <BundleResource Include="Resources\Settings.png" />
+    <BundleResource Include="Resources\Close.png" />
+    <BundleResource Include="Resources\Filter.png" />
+    <BundleResource Include="Resources\Menubar.png" />
+    <BundleResource Include="Resources\RightArrowPR.png" />
+    <BundleResource Include="Resources\Checkbox.png" />
+    <BundleResource Include="Resources\CheckboxSelected.png" />
+    <BundleResource Include="Resources\Sortdown.png" />
+    <BundleResource Include="Resources\Sortup.png" />
+    <BundleResource Include="Resources\RememberMeSelected.png" />
+    <BundleResource Include="Resources\RememberMe.png" />
+    <BundleResource Include="Resources\SplashAdient320480.png" />
+    <BundleResource Include="Resources\SplashAdient640960.png" />
+    <BundleResource Include="Resources\SplashAdient6401136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="OpenTK-1.0" />
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\..\packages\Xam.Plugin.Connectivity.3.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\packages\PDFSharp\iOS\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\..\packages\SQLitePCLRaw.core.1.1.8\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlite3">
+      <HintPath>..\..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.8\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.8\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\..\packages\SQLitePCLRaw.bundle_green.1.1.8\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\..\packages\Plugin.Permissions.2.0.1\lib\Xamarin.iOS10\Plugin.Permissions.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\..\packages\Plugin.Permissions.2.0.1\lib\Xamarin.iOS10\Plugin.Permissions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.Geolocator.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.0.1\lib\Xamarin.iOS10\Plugin.Geolocator.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.Geolocator">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.0.1\lib\Xamarin.iOS10\Plugin.Geolocator.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.Media.3.0.1\lib\Xamarin.iOS10\Plugin.Media.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\..\packages\Xam.Plugin.Media.3.0.1\lib\Xamarin.iOS10\Plugin.Media.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps.iOS">
+      <HintPath>..\..\packages\Xamarin.Forms.Maps.2.3.4.270\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="NGraphics.Custom">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.Svg.1.0.0.27\lib\Xamarin.iOS10\NGraphics.Custom.dll</HintPath>
+    </Reference>
+    <Reference Include="NGraphics.iOS.Custom">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.Svg.1.0.0.27\lib\Xamarin.iOS10\NGraphics.iOS.Custom.dll</HintPath>
+    </Reference>
+    <Reference Include="SVG.Forms.Plugin.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.Svg.1.0.0.27\lib\Xamarin.iOS10\SVG.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="SVG.Forms.Plugin.iOS">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.Svg.1.0.0.27\lib\Xamarin.iOS10\SVG.Forms.Plugin.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu%401x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\ic_info_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\ic_info_48pt.imageset\ic_info_48pt.png" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\ic_info_48pt.imageset\ic_info_48pt_2x.png" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\ic_info_48pt.imageset\ic_info_48pt_3x.png" />
+    <ImageAsset Include="Resources\ic_map_48pt.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_map_48pt.xcassets\ic_map_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_map_48pt.xcassets\ic_map_48pt.imageset\ic_map_48pt.png" />
+    <ImageAsset Include="Resources\ic_map_48pt.xcassets\ic_map_48pt.imageset\ic_map_48pt_2x.png" />
+    <ImageAsset Include="Resources\ic_map_48pt.xcassets\ic_map_48pt.imageset\ic_map_48pt_3x.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_48pt.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_camera_alt_48pt.xcassets\ic_camera_alt_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_camera_alt_48pt.xcassets\ic_camera_alt_48pt.imageset\ic_camera_alt_48pt.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_48pt.xcassets\ic_camera_alt_48pt.imageset\ic_camera_alt_48pt_2x.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_48pt.xcassets\ic_camera_alt_48pt.imageset\ic_camera_alt_48pt_3x.png" />
+    <ImageAsset Include="Resources\ic_insert_drive_file_48pt.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_insert_drive_file_48pt.xcassets\ic_insert_drive_file_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_insert_drive_file_48pt.xcassets\ic_insert_drive_file_48pt.imageset\ic_insert_drive_file_48pt.png" />
+    <ImageAsset Include="Resources\ic_insert_drive_file_48pt.xcassets\ic_insert_drive_file_48pt.imageset\ic_insert_drive_file_48pt_2x.png" />
+    <ImageAsset Include="Resources\ic_insert_drive_file_48pt.xcassets\ic_insert_drive_file_48pt.imageset\ic_insert_drive_file_48pt_3x.png" />
+    <ImageAsset Include="Resources\ic_settings_white_48.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_settings_white_48.xcassets\ic_settings_white_48.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_settings_white_48.xcassets\ic_settings_white_48.imageset\ic_settings_white_48.png" />
+    <ImageAsset Include="Resources\ic_settings_white_48.xcassets\ic_settings_white_48.imageset\ic_settings_white_48_2x.png" />
+    <ImageAsset Include="Resources\ic_settings_white_48.xcassets\ic_settings_white_48.imageset\ic_settings_white_48_3x.png" />
+    <ImageAsset Include="Resources\ic_settings_white.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_settings_white.xcassets\ic_settings_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_settings_white.xcassets\ic_settings_white.imageset\ic_settings_white.png" />
+    <ImageAsset Include="Resources\ic_settings_white.xcassets\ic_settings_white.imageset\ic_settings_white_2x.png" />
+    <ImageAsset Include="Resources\ic_settings_white.xcassets\ic_settings_white.imageset\ic_settings_white_3x.png" />
+    <ImageAsset Include="Resources\ic_person_white.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_person_white.xcassets\ic_person_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_person_white.xcassets\ic_person_white.imageset\ic_person_white.png" />
+    <ImageAsset Include="Resources\ic_person_white.xcassets\ic_person_white.imageset\ic_person_white_2x.png" />
+    <ImageAsset Include="Resources\ic_person_white.xcassets\ic_person_white.imageset\ic_person_white_3x.png" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white.imageset\ic_room_white.png" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white.imageset\ic_room_white_2x.png" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white.imageset\ic_room_white_3x.png" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_white.imageset\ic_camera_alt_white.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_white.imageset\ic_camera_alt_white_2x.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_white.imageset\ic_camera_alt_white_3x.png" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_white.imageset\ic_developer_board_white.png" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_white.imageset\ic_developer_board_white_2x.png" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_white.imageset\ic_developer_board_white_3x.png" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_white.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_white.imageset\ic_assignment_white_2x.png" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_white.imageset\ic_assignment_white.png" />
+    <ImageAsset Include="Resources\ic_default_avatar.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_default_avatar.xcassets\dean.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_default_avatar.xcassets\dean.imageset\deanpdf.pdf" />
+    <ImageAsset Include="Resources\ic_property.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_property.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_property.imageset\ic_property.pdf" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_vehicle.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_vehicle.imageset\ic_vehicle.pdf" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_contacts.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_contacts.imageset\ic_contacts.pdf" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_history.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_property.xcassets\ic_history.imageset\ic_history.pdf" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white_selected.imageset\ic_room_white_selected_3x.pdf" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white_selected.imageset\ic_room_white_selected.png" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white_selected.imageset\ic_room_white_selected_2x.png" />
+    <ImageAsset Include="Resources\ic_room_white.xcassets\ic_room_white_selected.imageset\ic_room_white_selected_3x.png" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_white.imageset\ic_assignment_white_3x.png" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_white.imageset\ic_assignment_white.pdf" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\AppIcon.appiconset\icon%4029.png" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\AppIcon.appiconset\icon%4058.png" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\AppIcon.appiconset\icon%4080.png" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\AppIcon.appiconset\icon%40120.png" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_emergency_contact.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_emergency_contact.imageset\Emergency Contacts_icon .pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_add.imageset\Add icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_add.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_auto_insurance.imageset\Auto insurance_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_auto_insurance.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_back.imageset\back_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_back.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_info.imageset\Basic info_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_info.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_info_selected.imageset\Basic info_select_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_info_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_claim.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_edit_location.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_edit_location.imageset\edit location_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_contacts.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_contacts.imageset\Emergency Contacts_icon .pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_location.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_location.imageset\Location_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_location_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_location_selected.imageset\Location_select_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_photos.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_photos.imageset\Photos_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_photos_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_photos_selected.imageset\Photos_select_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_property_insurance.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_property_insurance.imageset\Property insurance_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_property.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_property.imageset\Property_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_report.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_report.imageset\Report_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_report_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_report_selected.imageset\Report_select_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_settings.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_settings.imageset\setting.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_user_history.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_user_history.imageset\User history_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_user_profile.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_user_profile.imageset\userprofile.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_vehicle.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_vehicle.imageset\Vehicle_icon.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_view.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_view.imageset\view_icon.pdf" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_selected.imageset\ic_assignment_selected.pdf" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_selected.imageset\ic_assignment_selected.png" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_selected.imageset\ic_assignment_selected_2x.png" />
+    <ImageAsset Include="Resources\ic_assignment_white.xcassets\ic_assignment_selected.imageset\ic_assignment_selected_3x.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_selected.imageset\ic_camera_alt_selected.pdf" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_selected.imageset\ic_camera_alt_selected.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_selected.imageset\ic_camera_alt_selected_2x.png" />
+    <ImageAsset Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_selected.imageset\ic_camera_alt_selected_3x.png" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_selected.imageset\Contents.json" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_selected.imageset\ic_developer_board_selected.pdf" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_selected.imageset\ic_developer_board_selected.png" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_selected.imageset\ic_developer_board_selected_2x.png" />
+    <ImageAsset Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_selected.imageset\ic_developer_board_selected_3x.png" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_delete.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_delete.imageset\ic_delete_forever_white.png" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_delete.imageset\ic_delete_forever_white_2x.png" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_delete.imageset\ic_delete_forever_white_3x.png" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_delete.imageset\icon_delete.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_info_red.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_info_red.imageset\icon_info_red.pdf" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_claim.imageset\icon_claim.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\icon_radioButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\AppIcon.appiconset\60x60.png" />
+    <ImageAsset Include="Resources\ic_info_48pt.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\LaunchImage.launchimage\SplashAdient640960.png" />
+    <ImageAsset Include="Resources\App_Icons.xcassets\LaunchImage.launchimage\SplashAdient6401136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Photos\" />
+    <Folder Include="Resources\ic_settings_white_48.xcassets\ic_settings_white_48.imageset\" />
+    <Folder Include="Resources\ic_default_avatar.xcassets\dean.imageset\" />
+    <Folder Include="Resources\ic_property.xcassets\ic_property.imageset\" />
+    <Folder Include="Resources\ic_property.xcassets\ic_vehicle.imageset\" />
+    <Folder Include="Resources\ic_property.xcassets\ic_contacts.imageset\" />
+    <Folder Include="Resources\ic_property.xcassets\ic_history.imageset\" />
+    <Folder Include="Resources\ic_room_white.xcassets\ic_room_white_selected.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_vehicle.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_add.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_auto_insurance.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_back.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_info.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_info_selected.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_add_claim.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_edit_location.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_emergency_contact.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_location.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\Back_icon2.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_add.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_auto_insurance.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_back.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_info.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_info_selected.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_claim.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_edit_location.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_contacts.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_location.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_location_selected.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_photos.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_photos_selected.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_property_insurance.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_property.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_report.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_report_selected.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_settings.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_user_history.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_user_profile.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_vehicle.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_view.imageset\" />
+    <Folder Include="Resources\ic_assignment_white.xcassets\ic_assignment_selected.imageset\" />
+    <Folder Include="Resources\ic_camera_alt_white.xcassets\ic_camera_alt_selected.imageset\" />
+    <Folder Include="Resources\ic_developer_board_white.xcassets\ic_developer_board_selected.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_delete.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_info_red.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\icon_radioButton.imageset\" />
+    <Folder Include="Resources\App_Icons.xcassets\.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iApprove\iApprove.csproj">
+      <Project>{EBBBA609-4A87-42DF-A578-B00C20693E94}</Project>
+      <Name>iApprove</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

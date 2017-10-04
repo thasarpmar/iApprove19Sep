@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cc:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="iApprove.View.NotificationsPage" 
+    xmlns:cc="clr-namespace:iApprove.CustomControl;assembly=iApprove">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+    <ListView  Grid.Row="0" ItemsSource="{Binding NotificationsList}" SeparatorVisibility="None" HasUnevenRows="true">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="1"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" Margin="12">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" x:Name="DeptName" Text="{Binding DeaprtmentName}" TextColor="{StaticResource Primary}" FontAttributes="Bold" FontSize="16"/>
+                                <Label Grid.Column ="1" x:Name = "NotificationTime" Text="{Binding NotificationTime}" TextColor="{StaticResource SubTextForeColor}" HorizontalOptions="EndAndExpand" FontSize="12"/>
+                            </Grid>
+                            <Label Grid.Row="1" x:Name = "Description" Text="{Binding Description}"  FontSize="12" TextColor="{StaticResource SubTextForeColor}"/>
+                        </Grid>
+                        <BoxView Grid.Row="1" BackgroundColor="Gray" HeightRequest="1" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        
+    <Button Grid.Row="1" Text="CLEAR ALL" TextColor="{StaticResource SubTextForeColor}" HeightRequest="50" BackgroundColor="{StaticResource BannerColor}" IsVisible="{Binding IsRequestListVisible}" FontSize="12" HorizontalOptions="FillAndExpand" VerticalOptions="End" Command="{Binding FilterCommand}" />
+        </Grid>
+</cc:BaseContentPage>

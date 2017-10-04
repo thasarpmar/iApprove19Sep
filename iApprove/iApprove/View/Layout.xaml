@@ -1,0 +1,10 @@
+﻿using System;
+namespace iApprove.View
+{
+	public class Layout
+	{
+		public Layout()
+		{
+		}
+	}
+}

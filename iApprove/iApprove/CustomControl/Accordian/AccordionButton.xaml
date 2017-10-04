@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="iApprove.CustomControl.AccordionButton">
+	<ContentView.Content >
+		<StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand"
+			BackgroundColor="#3D846A" Padding="1,1,1,1" x:Name="MenuHolder" Margin="0,-3,0,0">
+			<Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+				BackgroundColor="#DAE0DE" Padding="5,12,5,12" x:Name="MenuFrame">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"></RowDefinition>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"></ColumnDefinition>
+					<ColumnDefinition Width="Auto"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+				
+				<Label HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Text="" x:Name="MenuTitle"
+				FontSize="16" TextColor="#13352C" Grid.Row="0" Grid.Column="0" 
+				HorizontalTextAlignment="Start" VerticalTextAlignment="Center"></Label>
+				
+				<Label HorizontalOptions="End" VerticalOptions="CenterAndExpand" Text="+" 
+				TextColor="#13352C" FontSize="18" FontAttributes="Bold" x:Name="MenuExpandMarker"
+				Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center"></Label>
+
+				<Grid.GestureRecognizers>
+				        <TapGestureRecognizer Tapped="OnButtonTapped"/>
+				</Grid.GestureRecognizers>
+			</Grid>
+		</StackLayout>
+	</ContentView.Content>
+</ContentView>

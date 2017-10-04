@@ -1,0 +1,16 @@
+{
+  "Notifications": [
+    {
+“id”:1,
+      "name": "ITARAS",
+      "description": "Description1",
+      "time": "6:29 AM"
+    },
+    {
+“id”:2,
+      "name": "FINANCE",
+      "description": "Description2",
+      "time": "10.29 AM"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cc:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:iApprove" x:Class="iApprove.View.Search" xmlns:cc="clr-namespace:iApprove.CustomControl;assembly=iApprove" xmlns:res="clr-namespace:iApprove.LangResource;assembly=iApprove" xmlns:conv="clr-namespace:iApprove.Converter;assembly=iApprove" xmlns:b="clr-namespace:Xamarin.Behaviors;assembly=Xamarin.Behaviors">
+    <cc:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <conv:SortImageConverter x:Key="sortImageConverter" />
+        </ResourceDictionary>
+    </cc:BaseContentPage.Resources>
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Orientation="Horizontal">
+            <Frame CornerRadius="4" OutlineColor="Silver" HasShadow="true" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <cc:CustomEntry x:Name="SearchTxtBar" BackgroundColor="White" TextColor="#BCBCBE" Text="{Binding UserName,Mode=TwoWay}" Placeholder="Type your search text here..." PlaceholderColor="#BCBCBE" TextChanged="Handle_TextChanged" HeightRequest="25" WidthRequest="335">
+                </cc:CustomEntry>
+            </Frame>
+        </StackLayout>
+        <Grid Grid.Row="1" x:Name="SearchText" IsVisible="true">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Search by:" TextColor="{StaticResource Primary}" FontSize="20" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="80,150,0,0" />
+            <Label Grid.Row="1" Text="Application Name" TextColor="{StaticResource SubTextForeColor}" FontSize="26" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="80,0,0,0" />
+            <Label Grid.Row="2" Text="Request ID" TextColor="{StaticResource SubTextForeColor}" FontSize="26" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="80,0,0,0" />
+            <Label Grid.Row="3" Text="Requestor Name" TextColor="{StaticResource SubTextForeColor}" FontSize="26" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="80,0,0,0" />
+        </Grid>
+        <Grid Grid.Row="1" x:Name="SearchList" IsVisible="false">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="{StaticResource SubTextForeColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="35">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Request Id" LineBreakMode="WordWrap" TextColor="White" Grid.Column="0" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="12,0,0,0" />
+                    <Image Source="{Binding SortImageSource, Converter={StaticResource sortImageConverter}}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByIDVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByIDTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Request Date" TextColor="White" LineBreakMode="WordWrap" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image Source="{Binding SortImageSource, Converter={StaticResource sortImageConverter}}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByDateVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByDateTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Column="2" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Request Type" LineBreakMode="WordWrap" TextColor="White" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image Source="{Binding SortImageSource, Converter={StaticResource sortImageConverter}}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByDateVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByTypeTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Grid.Column="3" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Requestor Name" LineBreakMode="WordWrap" TextColor="White" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" />
+                    <Image Source="{Binding SortImageSource, Converter={StaticResource sortImageConverter}}" Aspect="AspectFit" HeightRequest="10" WidthRequest="10" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsSortByDateVisible}" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SortByNameTappedCommand}" NumberOfTapsRequired="1" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+            <ListView Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="true" SeparatorVisibility="None" ItemsSource="{Binding PendingRequestList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition Height="1" />
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding RequestNo}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="12,0,0,0" TextColor="#616265" />
+                                        <Label Grid.Column="1" Text="{Binding DateReceived}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#616265" />
+                                        <Label Grid.Column="2" Text="{Binding RequestType}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#616265" />
+                                        <StackLayout Grid.Column="3" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Label Text="{Binding RequestorName}" FontSize="10" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="#616265" />
+                                            <Image Source="RightArrowPR.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,12,0" />
+                                        </StackLayout>
+                                    </Grid>
+                                    <BoxView Grid.Row="1" BackgroundColor="{StaticResource SeparatorColor}" HeightRequest="0.5" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                                    </BoxView>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</cc:BaseContentPage>

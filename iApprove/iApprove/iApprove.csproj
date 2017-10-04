@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBBBA609-4A87-42DF-A578-B00C20693E94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iApprove</RootNamespace>
+    <AssemblyName>iApprove</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Constants.cs" />
+    <Compile Include="CustomControl\CustomButton.cs" />
+    <Compile Include="CustomControl\CustomEntry.cs" />
+    <Compile Include="CustomControl\CustomListViewCell.cs" />
+    <Compile Include="CustomControl\CustomListViewControl.cs" />
+    <Compile Include="CustomControl\CustomListViewItem.cs" />
+    <Compile Include="CustomControl\CustomNavigationPage.cs" />
+    <Compile Include="Enum\ContactType.cs" />
+    <Compile Include="Enum\PageName.cs" />
+    <Compile Include="Interface\INavigationService.cs" />
+    <Compile Include="Interface\IPushNotificationHandler.cs" />
+    <Compile Include="LangResource\AppData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppData.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LangResource\TranslateExtension.cs" />
+    <Compile Include="Model\ContactModel.cs" />
+    <Compile Include="Repository\BaseRepository.cs" />
+    <Compile Include="Repository\ExceptionDatabase.cs" />
+    <Compile Include="Repository\ExceptionModel.cs" />
+    <Compile Include="Repository\ISQLite.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomControl\BaseContentPage.cs" />
+    <Compile Include="Model\UserInfoModel.cs" />
+    <Compile Include="Model\AuthenticationResult.cs" />
+    <Compile Include="CustomControl\CustomEditor.cs" />
+    <Compile Include="Enum\RTIncidentType.cs" />
+    <Compile Include="CustomControl\CustomMap.cs" />
+    <Compile Include="CustomControl\CustomPin.cs" />
+    <Compile Include="CustomControl\CustomMenuListView.cs" />
+    <Compile Include="CustomControl\CustomMenuViewCell.cs" />
+    <Compile Include="CustomControl\MenuOptionView.cs" />
+    <Compile Include="Model\MenuEachItem.cs" />
+    <Compile Include="CustomControl\CustomPicker.cs" />
+    <Compile Include="Enum\DeviceOrientations.cs" />
+    <Compile Include="Model\ProcessStatus.cs" />
+    <Compile Include="Enum\FileType.cs" />
+    <Compile Include="Services\MediaService.cs" />
+    <Compile Include="Interface\IMessageHandler.cs" />
+    <Compile Include="Services\MessageHandler.cs" />
+    <Compile Include="CustomControl\CircleImageView.cs" />
+    <Compile Include="Model\LocationData.cs" />
+    <Compile Include="Model\CameraDataModel.cs" />
+    <Compile Include="Enum\CarViewType.cs" />
+    <Compile Include="CustomControl\CustomCameraView.cs" />
+    <Compile Include="CustomControl\PassCodeView.xaml.cs">
+      <DependentUpon>PassCodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\INetworkListener.cs" />
+    <Compile Include="CustomControl\TopMenuView.xaml.cs">
+      <DependentUpon>TopMenuView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\Accordian\AccordionButton.xaml.cs">
+      <DependentUpon>AccordionButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\Accordian\BaseAccordianContentView.cs" />
+    <Compile Include="Model\UserHistory.cs" />
+    <Compile Include="Model\AppSettingsModel.cs" />
+    <Compile Include="Services\DataService.cs" />
+    <Compile Include="Interface\INavMenuClick.cs" />
+    <Compile Include="CustomControl\PDFWebView.cs" />
+    <Compile Include="View\MasterMainPage.xaml.cs">
+      <DependentUpon>MasterMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MasterMenuPage.xaml.cs">
+      <DependentUpon>MasterMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="Network\iApproveService.cs" />
+    <Compile Include="Model\ApplicationModel.cs" />
+    <Compile Include="Model\BasicInfo.cs" />
+    <Compile Include="Model\CDSIDsModel.cs" />
+    <Compile Include="Model\CommentsModel.cs" />
+    <Compile Include="Model\DenyReasonsModel.cs" />
+    <Compile Include="Model\DepartmentModel.cs" />
+    <Compile Include="Model\History.cs" />
+    <Compile Include="Model\LoginModel.cs" />
+    <Compile Include="Model\NotificationModel.cs" />
+    <Compile Include="Model\PendingRequests.cs" />
+    <Compile Include="Model\ResponseStatus.cs" />
+    <Compile Include="Model\SessionInfo.cs" />
+    <Compile Include="Model\SubRequest.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="Interface\IAppInfo.cs" />
+    <Compile Include="Interface\IDataSource.cs" />
+    <Compile Include="Interface\oldInterfaces\ICallback.cs" />
+    <Compile Include="Interface\oldInterfaces\ICommonUtility.cs" />
+    <Compile Include="Interface\oldInterfaces\IFileHandler.cs" />
+    <Compile Include="Interface\oldInterfaces\IMapCallBack.cs" />
+    <Compile Include="Interface\oldInterfaces\IMapHandler.cs" />
+    <Compile Include="Interface\oldInterfaces\IMediaController.cs" />
+    <Compile Include="Interface\oldInterfaces\ISecureStorage.cs" />
+    <Compile Include="Interface\oldInterfaces\ITextToSpeech.cs" />
+    <Compile Include="View\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\HomeViewModel.cs" />
+    <Compile Include="Enum\ServiceName.cs" />
+    <Compile Include="ViewModel\PendingRequestsViewModel.cs" />
+    <Compile Include="View\PendingRequestsPage.xaml.cs">
+      <DependentUpon>PendingRequestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridView.cs" />
+    <Compile Include="View\PendingRequestDetailsPage.xaml.cs">
+      <DependentUpon>PendingRequestDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\PendingRequestDetailsViewModel.cs" />
+    <Compile Include="Model\PendingRequestDetails.cs" />
+    <Compile Include="View\BasicInfo\BasicInfoContentView.xaml.cs">
+      <DependentUpon>BasicInfoContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ActionItem\ActionItemContentView.xaml.cs">
+      <DependentUpon>ActionItemContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PendingRequestDetailContentView\PendingRequestsDetailsHorizontalContentView.xaml.cs">
+      <DependentUpon>PendingRequestsDetailsHorizontalContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PendingRequestDetailContentView\PendingRequestDetailsVerticalContentView.xaml.cs">
+      <DependentUpon>PendingRequestDetailsVerticalContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PendingRequestDetailContentView\PendingRequestDetailModel.cs" />
+    <Compile Include="CustomControl\iApproveNavBar.xaml.cs">
+      <DependentUpon>iApproveNavBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\NotificationsViewModel.cs" />
+    <Compile Include="View\NotificationsPage.xaml.cs">
+      <DependentUpon>NotificationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SegmentedControl.cs" />
+    <Compile Include="XScrollView.cs" />
+    <Compile Include="RoundedBox.cs" />
+    <Compile Include="CustomControl\CircleLabelView.cs" />
+    <Compile Include="DemoCheckBox.cs" />
+    <Compile Include="View\History\HistoryContentView.xaml.cs">
+      <DependentUpon>HistoryContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Comments\CommentsContentView.xaml.cs">
+      <DependentUpon>CommentsContentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SvgImage.cs" />
+    <Compile Include="SelectMultipleBasePage.cs" />
+    <Compile Include="DateItem.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Converter\SortImageConverter.cs" />
+    <Compile Include="Converter\TextToImageConverter.cs" />
+    <Compile Include="Converter\PendingRequestAppend.cs" />
+    <Compile Include="View\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\SearchViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LangResource\AppData.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppData.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\PassCodeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\TopMenuView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\Accordian\AccordionButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icon.png" />
+    <EmbeddedResource Include="View\MasterMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MasterMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stubs\loginResponse-SUCCESS.json" />
+    <EmbeddedResource Include="View\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PendingRequestsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stubs\getPendingRequestsResponse.json" />
+    <EmbeddedResource Include="View\PendingRequestDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BasicInfo\BasicInfoContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ActionItem\ActionItemContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stubs\getPendingRequestDetails.json" />
+    <EmbeddedResource Include="View\PendingRequestDetailContentView\PendingRequestsDetailsHorizontalContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PendingRequestDetailContentView\PendingRequestDetailsVerticalContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stubs\Temp.json" />
+    <EmbeddedResource Include="CustomControl\iApproveNavBar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NotificationsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stubs\getNotificationsResponse.json" />
+    <EmbeddedResource Include="View\History\HistoryContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Comments\CommentsContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioButton_Selected.svg" />
+    <EmbeddedResource Include="View\Search.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\packages\PDFSharp\PCL\PdfSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="Stubs\getCDSIDsResponse.json" />
+    <None Include="Stubs\getCommentsRequest.json" />
+    <None Include="Stubs\getCommentsResponse.json" />
+    <None Include="Stubs\getDenyReasonsResponse.json" />
+    <None Include="Stubs\loginRequest.json" />
+    <None Include="Stubs\loginResponse-FAILURE.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CustomControl\Accordian\" />
+    <Folder Include="Network\" />
+    <Folder Include="View\BasicInfo\" />
+    <Folder Include="View\ActionItem\" />
+    <Folder Include="View\PendingRequestDetailContentView\" />
+    <Folder Include="View\History\" />
+    <Folder Include="View\Comments\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Converter\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

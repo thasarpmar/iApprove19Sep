@@ -1,0 +1,53 @@
+{
+  "Departments": [
+    {
+      "id": 1,
+      "logo": "FINANCE",
+      "name": "FINANCE",
+      "pendingRequestCount": 2
+    },
+    {
+      "id": 2,
+      "logo": "ITARAS",
+      "name": "ITARAS",
+      "pendingRequestCount": 4
+    },
+    {
+      "id": 3,
+      "logo": "HR",
+      "name": "HR",
+      "pendingRequestCount": 5
+    },
+    {
+      "id": 4,
+      "logo": "PDx",
+      "name": "PDx",
+      "pendingRequestCount": 6
+    },
+    {
+      "id": 5,
+      "logo": "CAR",
+      "name": "CAR",
+      "pendingRequestCount": 7
+    },
+    {
+      "id": 6,
+      "logo": "LOREMIPSUM",
+      "name": "LOREMIPSUM",
+      "pendingRequestCount": 8
+    },
+    {
+      "id": 7,
+      "logo": "IPSUM",
+      "name": "IPSUM",
+      "pendingRequestCount": 9
+    }
+  ],
+  "NotificationCount": 56,
+  "UserProfile": {
+    "profilePhoto": "http://via.placeholder.com/200x200",
+    "userName": "MyUserName",
+    "role": "Admin",
+    "lastLoggin": "345376346544"
+  }
+}

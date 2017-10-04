@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.actool.compilation-results</key>
+	<dict>
+		<key>output-files</key>
+		<array>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/bundle/AppIcon20x20@3x.png</string>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/bundle/LaunchImage-700@2x.png</string>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/bundle/LaunchImage-700-568h@2x.png</string>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/bundle/Assets.car</string>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/partial-info.plist</string>
+		</array>
+	</dict>
+	<key>com.apple.actool.document.warnings</key>
+	<array>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/cloned-assets/Resources/App_Icons.xcassets</string>
+			<key>message</key>
+			<string>The app icon set name "AppIcon" is used by multiple app icon sets.</string>
+			<key>type</key>
+			<string>Conflicting Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/cloned-assets/Resources/ic_info_48pt.xcassets</string>
+			<key>message</key>
+			<string>The app icon set name "AppIcon" is used by multiple app icon sets.</string>
+			<key>type</key>
+			<string>Conflicting Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/cloned-assets/Resources/App_Icons.xcassets</string>
+			<key>message</key>
+			<string>A 60x60@2x app icon is required for iPhone apps targeting iOS 7.0 and later</string>
+			<key>type</key>
+			<string>Missing Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./LaunchImage.launchimage/[ipad][][2x][portrait][full-screen][7.0][1d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/cloned-assets/Resources/App_Icons.xcassets</string>
+			<key>message</key>
+			<string>The launch image set "LaunchImage" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./AppIcon.appiconset/[][ios-marketing][][][][1x][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/tcs/Documents/iApprove19Sep/iApprove/iApprove.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/cloned-assets/Resources/App_Icons.xcassets</string>
+			<key>message</key>
+			<string>The app icon set "AppIcon" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,3 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android"><item android:state_pressed="true">
+            <shape android:shape="rectangle">
+                  <solid android:color="@color/selected_list_item_new" /></shape></item><!-- pressed --><!--<item android:drawable="@color/white" />--><item android:drawable="@color/light" /><!-- default --></selector>

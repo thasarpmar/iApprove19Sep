@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="white">#FFF</color>
+  <color name="black">#000</color>
+  <color name="red">#f80303</color>
+  <color name="highlight">#BBDEFB</color>
+  <color name="light">#000000</color>
+  <color name="selected_list_item_new">#8F8F8F</color>
+	<color name="normal">#000</color>
+    <color name="selected">#007AFF</color>
+</resources>

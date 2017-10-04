@@ -1,0 +1,24 @@
+{
+  "DenyReasons": [
+    {
+      "identifier": "3745345",
+      "displayName": "Reason1"
+    },
+    {
+      "identifier": "3745349",
+      "displayName": "Reason2"
+    },
+    {
+      "identifier": "3745348",
+      "displayName": "Reason3"
+    },
+    {
+      "identifier": "3745347",
+      "displayName": "Reason4"
+    },
+    {
+      "identifier": "3745346",
+      "displayName": "Reason5"
+    }
+  ]
+}

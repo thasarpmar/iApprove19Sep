@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:res="clr-namespace:iApprove.LangResource;assembly=iApprove" 
+	x:Class="iApprove.CustomControl.TopMenuView">
+	<ContentView.Content>
+		<Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start" x:Name="Subheader" IsVisible="true"
+				Style="{StaticResource SubNavigationHeaderStyle}" Padding="0,0,0,0" RowSpacing="0" ColumnSpacing="0" 
+				Margin="0,0,0,0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="50"/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="1"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="1"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="1"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<StackLayout Grid.Row="0" Grid.Column="0" VerticalOptions="FillAndExpand"
+					HorizontalOptions="FillAndExpand" Orientation="Vertical" x:Name="Menu1" BackgroundColor="#fff">
+					<Image
+						x:Name="Menu1Icon"
+                        Source="ic_room_white_selected"
+						VerticalOptions="FillAndExpand"
+						HorizontalOptions="CenterAndExpand"
+						Margin="0,0,0,0"
+						Style="{StaticResource NavImageStyle}"
+                        />
+					<Label Text="{res:Translate lblLocation}" HorizontalOptions="Center" VerticalOptions="Start"
+						Style="{StaticResource LabelVerySmallSelected}" FontAttributes="Bold"
+						x:Name="Menu1Border"></Label>
+				</StackLayout>
+				<Label Grid.Row="0" Grid.Column="0" HeightRequest="2"
+				VerticalOptions="End" YAlign="End" HorizontalOptions="FillAndExpand"
+				Style="{StaticResource LabelDividerHorizontal}"></Label>
+				
+				<Label VerticalOptions="Fill" Grid.Row="0" Grid.Column="1" 
+				Style="{StaticResource LabelDividerVerticalBlack}"></Label>
+				
+				<StackLayout Grid.Row="0" Grid.Column="2" x:Name="Menu2"
+					HorizontalOptions="FillAndExpand" Orientation="Vertical">
+					<Image
+						x:Name="Menu2Icon"
+                        Source="ic_assignment_white"
+						VerticalOptions="FillAndExpand"
+						HorizontalOptions="CenterAndExpand"
+						Margin="0,0,0,0"
+						Style="{StaticResource NavImageStyle}"
+                        />
+					<Label Text="{res:Translate lblIncident}" HorizontalOptions="Center" 
+						VerticalOptions="Start"  x:Name="Menu2Border"
+						Style="{StaticResource LabelVerySmall}"></Label>
+				</StackLayout>
+				<Label Grid.Row="0" Grid.Column="2" HeightRequest="2"
+				VerticalOptions="End" YAlign="End" HorizontalOptions="FillAndExpand"
+				Style="{StaticResource LabelDividerHorizontal}"></Label>
+				
+				<Label VerticalOptions="Fill" Grid.Row="0" Grid.Column="3" 
+				Style="{StaticResource LabelDividerVerticalBlack}"></Label>
+				
+				<StackLayout Grid.Row="0" Grid.Column="4"  x:Name="Menu3"
+					HorizontalOptions="FillAndExpand" Orientation="Vertical">
+					<Image
+						 x:Name="Menu3Icon"
+                        Source="ic_camera_alt_white"
+						VerticalOptions="FillAndExpand"
+						HorizontalOptions="CenterAndExpand"
+						Margin="0,0,0,0"
+						Style="{StaticResource NavImageStyle}"
+                        />
+					<Label Text="{res:Translate lblPhotos}" HorizontalOptions="Center" 
+						VerticalOptions="Start"  x:Name="Menu3Border"
+						Style="{StaticResource LabelVerySmall}"></Label>
+				</StackLayout>
+				<Label Grid.Row="0" Grid.Column="4" HeightRequest="2"
+				VerticalOptions="End" YAlign="End" HorizontalOptions="FillAndExpand"
+				Style="{StaticResource LabelDividerHorizontal}"></Label>
+				
+				<Label VerticalOptions="Fill" Grid.Row="0" Grid.Column="5" 
+				Style="{StaticResource LabelDividerVerticalBlack}"></Label>
+				
+				<StackLayout Grid.Row="0" Grid.Column="6"  x:Name="Menu4"
+					HorizontalOptions="FillAndExpand" Orientation="Vertical">
+					<Image
+						 x:Name="Menu4Icon"
+                        Source="ic_developer_board_white"
+						VerticalOptions="FillAndExpand"
+						HorizontalOptions="CenterAndExpand"
+						Margin="0,0,0,0"
+						Style="{StaticResource NavImageStyle}"
+                        />
+					<Label Text="{res:Translate lblReport}" HorizontalOptions="Center" 
+						VerticalOptions="Start"  x:Name="Menu4Border"
+						Style="{StaticResource LabelVerySmall}"></Label>
+				</StackLayout>
+				<Label Grid.Row="0" Grid.Column="6" HeightRequest="2"
+				VerticalOptions="End" YAlign="End" HorizontalOptions="FillAndExpand"
+				Style="{StaticResource LabelDividerHorizontal}"></Label>
+		</Grid>
+	</ContentView.Content>
+</ContentView>

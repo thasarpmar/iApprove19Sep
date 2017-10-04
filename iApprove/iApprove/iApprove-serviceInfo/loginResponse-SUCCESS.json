@@ -1,0 +1,29 @@
+{
+  "Departments": [
+    {
+“id”:1,
+      "logo": "https://www.sample.com/getLogo",
+      "name": "FINANCE",
+      "pendingRequestCount": 2
+    },
+    {
+“id”:2,
+      "logo": "https://www.sample.com/getLogo",
+      "name": "FINANCE",
+      "pendingRequestCount": 2
+    },
+    {
+“id”:3,
+      "logo": "https://www.sample.com/getLogo",
+      "name": "FINANCE",
+      "pendingRequestCount": 2
+    }
+  ],
+  "NotificationCount": 2,
+  "UserProfile": {
+    "profilePhoto": "https://www.sample.com/getProfilePhoto",
+    "userName": "MyUserName",
+    "role": "Admin",
+    "lastLoggin": "345376346544"
+  }
+}

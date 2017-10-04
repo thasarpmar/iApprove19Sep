@@ -1,0 +1,49 @@
+{
+  "PendingRequestDetails": {
+    "BasicInfo": {
+      "RequestType": "IT Account Request",
+      "PrimaryApprover": "David Wolf",
+      "RequesterName": "Johnson Michelle",
+      "UserAccountRequestType": "Myself",
+      "UserName": "Johnson Michelle",
+      "CDSID": "jomi23",
+      "Email": "johnson.michelle-ext@adient.com",
+      "Phone": "704-458-7089"
+    },
+    "ActionItem": {
+      "SubRequests": [
+        {
+          "identifier": "Sub1",
+          "AccountName": "Oracle DB",
+          "ActionName": "ADD",
+          "FileName": "Adient service request.docx"
+        },
+        {
+          "identifier": "Sub2",
+          "AccountName": "Oracle DB",
+          "ActionName": "ADD",
+          "FileName": "Adient service request.docx"
+        }
+      ]
+    },
+    "History": [
+      {
+        "RequestStatus": "ITARAS Access Request - Initiated",
+        "RequestDate": 3657345345,
+        "Approver": "Johnson Michelle"
+      },
+      {
+        "RequestStatus": "ITARAS Access Request - 1st Level Approved",
+        "RequestDate": 568756474,
+        "Approver": "Mike Clinton"
+      }
+    ],
+    "Comments": [
+      {
+        "Approver": "Mike Clinton",
+        "DisplayComments": "I have approved",
+        "Date": 3535677353
+      }
+    ]
+  }
+}

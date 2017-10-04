@@ -1,0 +1,24 @@
+{
+  "NotificationModel": [
+    {
+      "deptName": "ITARAS",
+      "timeNotified": 3465,
+      "description": "New ITARAS request no 3748848 initiated by CDS ID"
+    },
+    {
+      "deptName": "ITARAS1",
+      "timeNotified": 3465,
+      "description": "New ITARAS request no 3748848 initiated by CDS ID"
+    },
+    {
+      "deptName": "ITARAS2",
+      "timeNotified": 3465,
+      "description": "New ITARAS request no 3748848 initiated by CDS ID"
+    },
+    {
+      "deptName": "ITARAS3",
+      "timeNotified": 3465,
+      "description": "New ITARAS request no 3748848 initiated by CDS ID"
+    }
+  ]
+}

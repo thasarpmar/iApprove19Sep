@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cc:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:iApprove"
+    x:Class="iApprove.View.PendingRequestDetailsPage" xmlns:cc="clr-namespace:iApprove.CustomControl;assembly=iApprove" xmlns:res="clr-namespace:iApprove.LangResource;assembly=iApprove"
+    Title="{res:Translate titlePendingRequestDetailsPage}" Style="{StaticResource ContentPageStyle}"
+    xmlns:CV="clr-namespace:iApprove.View.PendingRequestDetailContentView;assembly=iApprove"
+    >
+	<cc:BaseContentPage.Content>
+        <Grid x:Name="MainGrd">
+        <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+             <StackLayout Grid.Row="1" BackgroundColor="#00465B">
+                   <Label Text="{Binding ContentViewHeader}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+ <!--            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0">
+                                        <Label Text="Request No" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="56456456464546" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="Date Received" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="25-Jul-2017" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="2">
+                                        <Label Text="Status" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                        <Label Text="Pending" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </Grid>-->
+
+                              <!--<CV:PendingRequestsDetailsHorizontalContentView BindingContext="{Binding}" Grid.Row="0"></CV:PendingRequestsDetailsHorizontalContentView>-->
+         <!--<cc:XScrollView ItemsSource="{Binding TempList}" Grid.Row="0">
+                <XScrollView.ItemTemplate>
+                     <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                
+                                        <Label Text="{Binding title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+                                       
+                                    <Label Text="{Binding Value}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1"/>
+                                     </Grid>
+            </XScrollView.ItemTemplate>
+            </cc:XScrollView>-->
+           <!-- <local:XScrollView ItemsSource="{Binding TempList}" Grid.Row="0"> 
+            <local:XScrollView.ItemTemplate>
+                     <DataTemplate>
+                <ViewCell>
+                     <ViewCell.View>
+                     <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                
+                                        <Label Text="{Binding title}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="0"/>
+                                       
+                                    <Label Text="{Binding Value}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Row="1"/>
+                                     </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+            </local:XScrollView.ItemTemplate>
+            </local:XScrollView>-->
+           <!-- <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                         <ColumnDefinition Width="*"/>
+                                         <ColumnDefinition Width="*"/>
+                     <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="0" ClassId="BasicInfoID" x:Name="BasicInfoStkPnl">
+                                        <Label Text="Basic Info" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" x:Name="BasicInfoLbl"/>
+                                        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer 
+                Tapped="Handle_Tapped" 
+                NumberOfTapsRequired="1"
+             />
+        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="1" ClassId="ActionItemID" x:Name="ActionItemStkPnl">
+                                        <Label Text="Action Item" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                                         <TapGestureRecognizer 
+                Tapped="Handle_Tapped" 
+                NumberOfTapsRequired="1"
+             />
+        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout Grid.Column="2" ClassId="HistoryID">
+                                        <Label Text="History" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                                         <TapGestureRecognizer 
+                Tapped="Handle_Tapped" 
+                NumberOfTapsRequired="1"
+             />
+        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                                    <StackLayout Grid.Column="3" ClassId="CommentsID">
+                                        <Label Text="Comments" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <StackLayout.GestureRecognizers>
+                                         <TapGestureRecognizer 
+                Tapped="Handle_Tapped" 
+                NumberOfTapsRequired="1"
+             />
+        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                </Grid>-->
+
+            <ScrollView Grid.Row="2">
+                <Grid x:Name="ContentGrd"></Grid>
+            </ScrollView>
+            
+        </Grid>
+	</cc:BaseContentPage.Content>
+</cc:BaseContentPage>
